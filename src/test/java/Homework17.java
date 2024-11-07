@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -36,7 +37,7 @@ public class Homework17 extends BaseTest {
         choosePlaylist();
         Thread.sleep(1000);
         //actual vs expected
-        assertEquals(getAddToPlaylistMessage(), expectedSongAddedMessage);
+        Assert.assertEquals(getAddToPlaylistMessage(), expectedSongAddedMessage);
 
         String url = "https://qa.koel.app/";
         driver.get(url);
